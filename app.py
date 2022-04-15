@@ -33,4 +33,5 @@ def delete(note_id):
     db.Notes.delete_one({'_id':ObjectId(note_id)})
     return redirect('/')
     
-app.run(debug = True)
+if '__main__' == __name__:
+    app.run(debug = False)
